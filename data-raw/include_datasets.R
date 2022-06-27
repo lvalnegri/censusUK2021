@@ -27,8 +27,10 @@ y <- setDT(yb |> st_drop_geometry())[y, on = 'LAD']
 y[, area := area / 1e6]
 yb <- yb |> subset(select = 'LAD')
 save_as_rda(yb, 'LAD')
+st_write(yb, './data-raw/LAD.kml')
 save_as_rda(y, 'lookups')
 Rfuns::dd_dbm_do('uk_census_2022', 'w', 'lookups', y)
+fwrite(y, './data-raw/lookups.csv')
 
 # RGN Boundaries
 ybr <- rbind(
@@ -36,6 +38,7 @@ ybr <- rbind(
         rmapshaper::ms_dissolve(yb |> merge(y[, .(LAD, RGN)]) |> subset(substr(LAD, 1, 1) == 'W'), 'RGN')
 )
 save_as_rda(ybr, 'RGN')
+st_write(ybr, './data-raw/RGN.kml')
 
 # Population
 
