@@ -1,4 +1,4 @@
-Package: census_uk_2021
+Package: censusUK2021
 Type: Package
 Date: 2022-06-28
 Title: Data, boundaries and a Shiny app about the UK Census 2021
