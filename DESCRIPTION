@@ -1,0 +1,20 @@
+Package: census_uk_2021
+Type: Package
+Date: 2022-06-28
+Title: Data, boundaries and a Shiny app about the UK Census 2021
+Version: 0.1.0
+Authors@R: person("Luca", "Valnegri", email = "l.valnegri@datamaps.co.uk", role = c("aut", "cre"))
+Description: 
+  Data, boundaries and a Shiny app to visualize interactively the new preliminary results of the last 2021 UK Census.
+  As of June 2022, data only include population by sex and age in five-years classes plus households, 
+  with the lowest geographical detail being Local Authority Districts in England and Wales only.
+License: file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.1)
+Imports:
+  data.table,
+  sf
+Suggests:
+Remotes:
+LazyData: true
+RoxygenNote: 7.2.0
