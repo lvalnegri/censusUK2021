@@ -4,6 +4,11 @@
 #' As of June 2022, data only include "population" by "sex" and "age" in five-years classes plus "households", 
 #' with the lowest geographical detail being "Local Authority Districts" in England and Wales only.
 #'  
+#' Attributions:
+#' - Contains OS data © Crown copyright and database rights [2021]
+#' - Contains National Statistics data © Crown copyright and database rights [2021]
+#' - Source: Office for National Statistics licensed under the Open Government Licence v.3.0
+#' 
 #' @docType package
 #' @name censusUK2021
 NULL
