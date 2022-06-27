@@ -7,40 +7,58 @@ library(Rfuns)
 dbn <- 'uk_census_2022'
 dd_create_db(dbn)
 
-## TABLE <lookups> --------------------
+## TABLE <zones> --------------------
 x <- "
     `LAD` CHAR(9) NOT NULL,
-    `x_lon` DECIMAL(10,8) NOT NULL,
-    `y_lat` DECIMAL(10,8) NOT NULL,
-    `area` DECIMAL(9,5) NOT NULL,
     `LADn` VARCHAR(35) NOT NULL,
+    `UTLA` CHAR(9) NOT NULL,
+    `UTLAn` VARCHAR(35) NOT NULL,
     `RGN` CHAR(9) NULL DEFAULT NULL,
     `RGNn` CHAR(25) NULL DEFAULT NULL,
     `CTRY` CHAR(9) NOT NULL,
     `CTRYn` CHAR(7) NOT NULL,
+    `x_lon` DECIMAL(10,8) NOT NULL,
+    `y_lat` DECIMAL(10,8) NOT NULL,
+    `area` DECIMAL(9,5) NOT NULL,
     PRIMARY KEY (`LAD`),
+    KEY `UTLA` (`UTLA`),
     KEY `RGN` (`RGN`),
     KEY `CTRY` (`CTRY`)
 "
-dd_create_dbtable('lookups', dbn, x)
+dd_create_dbtable('zones', dbn, x)
 
-## TABLE <population> -----------------
+## TABLE <tables> -----------------
 x <- "
-    `LAD` CHAR(13) NOT NULL,
-    `age` TINYINT UNSIGNED NOT NULL,
-    `sex` CHAR(1) NOT NULL,
-    `value` MEDIUMINT UNSIGNED NOT NULL,
-    PRIMARY KEY (`LAD`, `age`, `sex`)
+    `id` CHAR(3) NOT NULL,
+    `description` VARCHAR(75) NOT NULL,
+    `lowest_geo` CHAR(4) NOT NULL,
+    `countries` CHAR(4) NOT NULL,
+    PRIMARY KEY (`id`)
 "
-dd_create_dbtable('population', dbn, x)
+dd_create_dbtable('tables', dbn, x)
 
-## TABLE <households> -----------------
+## TABLE <vars> -----------------
 x <- "
-    `LAD` CHAR(13) NOT NULL,
-    `value` MEDIUMINT UNSIGNED NOT NULL,
-    PRIMARY KEY (`LAD`)
+    `id` CHAR(6) NOT NULL,
+    `table_id` CHAR(3) NOT NULL,
+    `description` VARCHAR(75) NOT NULL,
+    `label` CHAR(15) NOT NULL,
+    `reference` CHAR(6) NULL DEFAULT NULL,
+    PRIMARY KEY (`id`),
+    KEY `table_id` (`table_id`),
+    KEY `reference` (`reference`)
 "
-dd_create_dbtable('households', dbn, x)
+dd_create_dbtable('vars', dbn, x)
+
+## TABLE <dataset> -----------------
+x <- "
+    `var_id` CHAR(6) NOT NULL,
+    `LAD` CHAR(9) NOT NULL,
+    `period` SMALLINT UNSIGNED NOT NULL,
+    `value` MEDIUMINT UNSIGNED NOT NULL,
+    PRIMARY KEY (`var_id`, `LAD`, `period`)
+"
+dd_create_dbtable('dataset', dbn, x)
 
 ## END --------------------------------
 rm(list = ls())
