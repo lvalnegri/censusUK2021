@@ -26,5 +26,5 @@ vignettes/*.pdf
 *.knit.md
 # R Environment Variables
 .Renviron
-census_uk_2021.Rproj
 .Rbuildignore
+censusUK2021.Rproj
