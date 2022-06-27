@@ -1,0 +1,6 @@
+id,description,lowest_geo,countries
+P01,Usual resident population by sex,LAD,EW
+P02,Usual resident population by five-year age group,LAD,EW
+P03,Usual resident population by sex and five-year age group,LAD,EW
+P04,Usual resident population density,LAD,EW
+H01,Number of households with at least one usual resident,LAD,EW
