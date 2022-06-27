@@ -5,6 +5,11 @@ $R$ package that include data, boundaries and a [Shiny]() app to visualize inter
 As of June 2022, data only include *population* by *sex* and *age* in five-years classes plus *households*, with the lowest geographical detail being *Local Authority Districts* in England and Wales only.
 
 
+### Resources
+- [ONS Release Plans](https://www.ons.gov.uk/census/censustransformationprogramme/census2021outputs/releaseplans)
+- [Lookups LAD-UTLA](https://geoportal.statistics.gov.uk/documents/ward-to-westminster-parliamentary-constituency-to-local-authority-district-to-upper-tier-local-authority-december-2021-lookup-in-the-united-kingdom/)
+- [Boundaries LAD]()
+
 
 ### Attributions
 
