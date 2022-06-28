@@ -1,6 +1,6 @@
 ## UK Census 2021
 
-$R$ package that include data, boundaries and a [Shiny]() app (to come) to visualize interactively the new preliminary results of the last 2021 UK Census.
+$R$ package that include data, boundaries, functionalities and a [Shiny]() app (to come) to visualize interactively the new preliminary results of the last 2021 UK Census.
 
 If you're only interested in data or boundaries, just look into the `data-raw` folder:
  - `dataset.csv` all currently published data plus its historic since 1981
@@ -18,7 +18,6 @@ As of June 2022, data only include *population* by *sex* and *age* in five-years
 
 
 ### Attributions
-
 - Contains OS data © Crown copyright and database rights [2022]
 - Contains National Statistics data © Crown copyright and database rights [2022]
 - Source: Office for National Statistics licensed under the Open Government Licence v.3.0
