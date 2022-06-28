@@ -42,21 +42,27 @@ x <- "
     `id` CHAR(6) NOT NULL,
     `table_id` CHAR(3) NOT NULL,
     `description` VARCHAR(75) NOT NULL,
+    `slabel` CHAR(15) NOT NULL,
     `label` CHAR(15) NOT NULL,
     `reference` CHAR(6) NULL DEFAULT NULL,
+    `historic` TINYINT UNSIGNED NOT NULL COMMENT '0- current only, 1- both current and historic,
+2- historic only. To query current: <= 1, to query both: >= 1.',
+    `ordering` TINYINT UNSIGNED NOT NULL,
     PRIMARY KEY (`id`),
     KEY `table_id` (`table_id`),
-    KEY `reference` (`reference`)
+    KEY `reference` (`reference`),
+    KEY `historic` (`historic`),
+    KEY `ordering` (`ordering`)
 "
 dd_create_dbtable('vars', dbn, x)
 
 ## TABLE <dataset> -----------------
 x <- "
     `var_id` CHAR(6) NOT NULL,
-    `LAD` CHAR(9) NOT NULL,
+    `zone_id` CHAR(9) NOT NULL,
     `period` SMALLINT UNSIGNED NOT NULL,
     `value` MEDIUMINT UNSIGNED NOT NULL,
-    PRIMARY KEY (`var_id`, `LAD`, `period`)
+    PRIMARY KEY (`var_id`, `zone_id`, `period`)
 "
 dd_create_dbtable('dataset', dbn, x)
 
