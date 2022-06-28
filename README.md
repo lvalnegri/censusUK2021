@@ -4,9 +4,10 @@ $R$ package that include data, boundaries, functionalities and a [Shiny]() app (
 
 If you're only interested in data or boundaries, just look into the `data-raw` folder:
  - `dataset.csv` all currently published data plus its historic since 1981
- - `zones.csv` the lookups between Local Authorithy Districts (LAD), Upper Tier Local Authority (UTLA), Region (RGN), COuntry (CTRY)
+ - `zones.csv` the lookups between Local Authorithy Districts (LAD), Upper Tier Local Authorities (UTLA), Regions (RGN), Countries (CTRY)
  - `tables.csv` Codes and descriptions for the published tables
  - `vars.csv` Codes and descriptions for the variables included in each table
+ - `LAD.kml`, `UTLA.kml` and `RGN.kml` are the boundaries in `kml` format and `WGS84` *CRS* for respectively Local Authorithy Districts, Upper Tier Local Authorities, Regions. 
 
 As of June 2022, data only include *population* by *sex* and *age* in five-years classes plus *households*, with the lowest geographical detail being *Local Authority Districts* in England and Wales only.
 
