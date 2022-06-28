@@ -24,7 +24,7 @@ NULL
 #'
 'czones'
 
-#' cdata
+#' dataset
 #'
 #' Data for Local Authority Districts (and up) in England and Wales for the Census from 1981 to 2021, 
 #' 
@@ -38,7 +38,7 @@ NULL
 #'
 #' For more details, consult the website \url{https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/populationandhouseholdestimatesenglandandwales/census2021}
 #'
-'cdata'
+'dataset'
 
 #'ctables
 #'

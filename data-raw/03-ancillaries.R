@@ -6,14 +6,14 @@ Rfuns::load_pkgs(dmp = FALSE, 'data.table', 'readxl', 'rmapshaper', 'sf')
 
 dbn <- 'uk_census_2022'
 save_as_rda <- function(y, fn, db = TRUE){
-  if(db) dd_dbm_do(dbn, 'w', fn, y)
+  if(db) dd_dbm_do(dbn, 'w', substring(fn, 2), y)
   assign(fn, y)
-  save( list = fn, file = file.path('data', paste0(ifelse(db, 'c', ''), fn, '.rda')), version = 3, compress = 'gzip' )
+  save( list = fn, file = file.path('data', paste0(fn, '.rda')), version = 3, compress = 'gzip' )
 }
 
 # Ancillary tables
-save_as_rda(fread('./data-raw/tables.csv'), 'tables')
-save_as_rda(fread('./data-raw/vars.csv'), 'vars')
+save_as_rda(fread('./data-raw/ctables.csv'), 'ctables')
+save_as_rda(fread('./data-raw/cvars.csv'), 'cvars')
 
 # ZONES [1]
 tmpf <- tempfile()
@@ -42,7 +42,7 @@ st_write(yb, './data-raw/LAD.kml', delete_layer = TRUE)
 # ZONES [2]
 setcolorder(y, names(dd_dbm_do(dbn, 'q', strSQL = "SELECT * FROM zones LIMIT 0")))
 setorderv(y, c('CTRYn', 'RGNn', 'UTLAn', 'LADn'))
-save_as_rda(y, 'zones')
+save_as_rda(y, 'czones')
 fwrite(y, './data-raw/zones.csv')
 
 # UTLA Boundaries

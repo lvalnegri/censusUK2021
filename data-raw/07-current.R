@@ -8,8 +8,8 @@ Rfuns::load_pkgs(dmp = FALSE, 'data.table', 'readxl')
 
 tmpf <- tempfile()
 download.file('https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationandhouseholdestimatesenglandandwalescensus2021/census2021/census2021firstresultsenglandwales1.xlsx', tmpf)
-yv <- fread('./data-raw/vars.csv')[historic <= 1]
-yz <- fread('./data-raw/zones.csv')
+yv <- fread('./data-raw/cvars.csv')[historic <= 1]
+yz <- fread('./data-raw/czones.csv')
 yz <- unique(rbindlist(list(yz[, .(LAD)], yz[, .(UTLA)], yz[!is.na(RGN), .(RGN)], yz[, .(CTRY)]), use.names = FALSE))[order(LAD)]
 dts <- data.table()
 for(sh in grep('^P|H', excel_sheets(tmpf), value = TRUE)){
@@ -28,7 +28,7 @@ dts[, value := as.integer(round(as.numeric(value)))]
 setorderv(dts, c('period', 'zone_id', 'var_id'))
 
 dd_dbm_do('uk_census_2022', 'w', 'dataset', dts)
-fn <- 'cdata'
+fn <- 'dataset'
 assign(fn, dts)
 save( list = fn, file = file.path('data', paste0(fn, '.rda')), version = 3, compress = 'gzip' )
 fwrite(dts, './data-raw/dataset.csv')
