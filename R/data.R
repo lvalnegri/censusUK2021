@@ -1,7 +1,7 @@
 #' @importFrom data.table data.table
 NULL
 
-#' zones
+#' czones
 #'
 #' List of all zones in England and Wales included in "dataset", displayed as a lookup table
 #' 
@@ -22,9 +22,9 @@ NULL
 #'
 #' For more details, consult the website \url{https://geoportal.statistics.gov.uk/}
 #'
-'zones'
+'czones'
 
-#' dataset
+#' cdata
 #'
 #' Data for Local Authority Districts (and up) in England and Wales for the Census from 1981 to 2021, 
 #' 
@@ -38,9 +38,9 @@ NULL
 #'
 #' For more details, consult the website \url{https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/populationandhouseholdestimatesenglandandwales/census2021}
 #'
-'dataset'
+'cdata'
 
-#' tables
+#'ctables
 #'
 #' List of the tables disseminated with preliminary results from ONS for Census 2021 (28-Jun-2022)
 #' 
@@ -54,9 +54,9 @@ NULL
 #'
 #' For more details, consult the website \url{https://www.ons.gov.uk/releases/initialfindingsfromthe2021censusinenglandandwales}
 #'
-'tables'
+'ctables'
 
-#' vars
+#' cvars
 #'
 #' List of the variables disseminated with preliminary results from ONS for Census 2021 (28-Jun-2022)
 #' 
@@ -79,7 +79,7 @@ NULL
 #'
 #' For more details, consult the website \url{https://www.ons.gov.uk/releases/initialfindingsfromthe2021censusinenglandandwales}
 #'
-'vars'
+'cvars'
 
 
 #' @import sf

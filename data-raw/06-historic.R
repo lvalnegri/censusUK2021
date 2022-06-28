@@ -8,7 +8,7 @@ library('data.table')
 dbn <- 'uk_census_2022'
 yv <- fread('./data-raw/vars.csv')
 yz <- fread('./data-raw/zones.csv')
-yz <- unique(rbindlist(list(yz[, .(zone_id = LAD)], yz[, .(UTLA)], yz[!is.na(RGN), .(RGN)], yz[, .(CTRY)]), use.names = FALSE))[order(zone_id)]
+yz <- unique(rbindlist(list(yz[, .(zone_id = LAD)], yz[, .(UTLA)], yz[RGN != '', .(RGN)], yz[, .(CTRY)]), use.names = FALSE))[order(zone_id)]
 
 down_files <- function(x1, x2, s = 2){
     tmpf <- tempfile()

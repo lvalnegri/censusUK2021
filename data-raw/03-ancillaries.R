@@ -8,7 +8,7 @@ dbn <- 'uk_census_2022'
 save_as_rda <- function(y, fn, db = TRUE){
   if(db) dd_dbm_do(dbn, 'w', fn, y)
   assign(fn, y)
-  save( list = fn, file = file.path('data', paste0(fn, '.rda')), version = 3, compress = 'gzip' )
+  save( list = fn, file = file.path('data', paste0(ifelse(db, 'c', ''), fn, '.rda')), version = 3, compress = 'gzip' )
 }
 
 # Ancillary tables

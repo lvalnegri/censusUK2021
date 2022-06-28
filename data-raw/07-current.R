@@ -6,13 +6,6 @@
 
 Rfuns::load_pkgs(dmp = FALSE, 'data.table', 'readxl')
 
-dbn <- 'uk_census_2022'
-save_as_rda <- function(y, fn, db = TRUE){
-  if(db) dd_dbm_do(dbn, 'w', fn, y)
-  assign(fn, y)
-  save( list = fn, file = file.path('data', paste0(fn, '.rda')), version = 3, compress = 'gzip' )
-}
-
 tmpf <- tempfile()
 download.file('https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationandhouseholdestimatesenglandandwalescensus2021/census2021/census2021firstresultsenglandwales1.xlsx', tmpf)
 yv <- fread('./data-raw/vars.csv')[historic <= 1]
@@ -33,7 +26,11 @@ setcolorder(dts, 'period')
 dts <- rbindlist(list( dts, fread('./data-raw/historic.csv') ))
 dts[, value := as.integer(round(as.numeric(value)))]
 setorderv(dts, c('period', 'zone_id', 'var_id'))
-save_as_rda(dts, 'dataset')
+
+dd_dbm_do('uk_census_2022', 'w', 'dataset', dts)
+fn <- 'cdata'
+assign(fn, dts)
+save( list = fn, file = file.path('data', paste0(fn, '.rda')), version = 3, compress = 'gzip' )
 fwrite(dts, './data-raw/dataset.csv')
 fst::write_fst(dts, './data-raw/dataset')
 
