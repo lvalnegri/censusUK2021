@@ -1,6 +1,12 @@
 ## UK Census 2021
 
-$R$ package that include data, boundaries and a [Shiny]() app to visualize interactively the new preliminary results of the last 2021 UK Census.
+$R$ package that include data, boundaries and a [Shiny]() app (to come) to visualize interactively the new preliminary results of the last 2021 UK Census.
+
+If you're only interested in data or boundaries, just look into the `data-raw` folder:
+ - `dataset.csv` all currently published data plus its historic since 1981
+ - `zones.csv` the lookups between Local Authorithy Districts (LAD), Upper Tier Local Authority (UTLA), Region (RGN), COuntry (CTRY)
+ - `tables.csv` Codes and descriptions for the published tables
+ - `vars.csv` Codes and descriptions for the variables included in each table
 
 As of June 2022, data only include *population* by *sex* and *age* in five-years classes plus *households*, with the lowest geographical detail being *Local Authority Districts* in England and Wales only.
 
