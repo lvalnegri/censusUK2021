@@ -1,65 +1,68 @@
-id,table_id,description,label,reference
-P01001,P01,All persons,All Persons,
-P01002,P01,Females,Females,P01001
-P01003,P01,Males,Males,P01001
-P02001,P02,All persons,All Persons,
-P02002,P02,Aged 4 years and under,0-4,P01001
-P02003,P02,Aged 5 to 9 years,5-9,P01001
-P02004,P02,Aged 10 to 14 years,10-14,P01001
-P02005,P02,Aged 15 to 19 years,15-19,P01001
-P02006,P02,Aged 20 to 24 years,20-24,P01001
-P02007,P02,Aged 25 to 29 years,25-29,P01001
-P02008,P02,Aged 30 to 34 years,30-34,P01001
-P02009,P02,Aged 35 to 39 years,35-39,P01001
-P02010,P02,Aged 40 to 44 years,40-44,P01001
-P02011,P02,Aged 45 to 49 years,45-49,P01001
-P02012,P02,Aged 50 to 54 years,50-54,P01001
-P02013,P02,Aged 55 to 59 years,55-59,P01001
-P02014,P02,Aged 60 to 64 years,60-64,P01001
-P02015,P02,Aged 65 to 69 years,65-69,P01001
-P02016,P02,Aged 70 to 74 years,70-74,P01001
-P02017,P02,Aged 75 to 79 years,75-79,P01001
-P02018,P02,Aged 80 to 84 years,80-84,P01001
-P02019,P02,Aged 85 to 89 years,85-89,P01001
-P02020,P02,Aged 90 years and over,90+,P01001
-P03001,P03,All persons,All Persons,
-P03002,P03,Females: Aged 4 years and under,F 0-4,P01002
-P03003,P03,Females: Aged 5 to 9 years,F 5-9,P01002
-P03004,P03,Females: Aged 10 to 14 years,F 10-14,P01002
-P03005,P03,Females: Aged 15 to 19 years,F 15-19,P01002
-P03006,P03,Females: Aged 20 to 24 years,F 20-24,P01002
-P03007,P03,Females: Aged 25 to 29 years,F 25-29,P01002
-P03008,P03,Females: Aged 30 to 34 years,F 30-34,P01002
-P03009,P03,Females: Aged 35 to 39 years,F 35-39,P01002
-P03010,P03,Females: Aged 40 to 44 years,F 40-44,P01002
-P03011,P03,Females: Aged 45 to 49 years,F 45-49,P01002
-P03012,P03,Females: Aged 50 to 54 years,F 50-54,P01002
-P03013,P03,Females: Aged 55 to 59 years,F 55-59,P01002
-P03014,P03,Females: Aged 60 to 64 years,F 60-64,P01002
-P03015,P03,Females: Aged 65 to 69 years,F 65-69,P01002
-P03016,P03,Females: Aged 70 to 74 years,F 70-74,P01002
-P03017,P03,Females: Aged 75 to 79 years,F 75-79,P01002
-P03018,P03,Females: Aged 80 to 84 years,F 80-84,P01002
-P03019,P03,Females: Aged 85 to 89 years,F 85-89,P01002
-P03020,P03,Females: Aged 90 years and over,F 90+,P01002
-P03021,P03,Males: Aged 4 years and under,M 0-4,P01003
-P03022,P03,Males: Aged 5 to 9 years,M 5-9,P01003
-P03023,P03,Males: Aged 10 to 14 years,M 10-14,P01003
-P03024,P03,Males: Aged 15 to 19 years,M 15-19,P01003
-P03025,P03,Males: Aged 20 to 24 years,M 20-24,P01003
-P03026,P03,Males: Aged 25 to 29 years,M 25-29,P01003
-P03027,P03,Males: Aged 30 to 34 years,M 30-34,P01003
-P03028,P03,Males: Aged 35 to 39 years,M 35-39,P01003
-P03029,P03,Males: Aged 40 to 44 years,M 40-44,P01003
-P03030,P03,Males: Aged 45 to 49 years,M 45-49,P01003
-P03031,P03,Males: Aged 50 to 54 years,M 50-54,P01003
-P03032,P03,Males: Aged 55 to 59 years,M 55-59,P01003
-P03033,P03,Males: Aged 60 to 64 years,M 60-64,P01003
-P03034,P03,Males: Aged 65 to 69 years,M 65-69,P01003
-P03035,P03,Males: Aged 70 to 74 years,M 70-74,P01003
-P03036,P03,Males: Aged 75 to 79 years,M 75-79,P01003
-P03037,P03,Males: Aged 80 to 84 years,M 80-84,P01003
-P03038,P03,Males: Aged 85 to 89 years,M 85-89,P01003
-P03039,P03,Males: Aged 90 years and over,M 90+,P01003
-P04001,P04,Population density,Population density,
-H01001,H01,Number of households with at least one usual resident ,Households,
+id,table_id,description,slabel,label,reference,historic,ordering
+P01001,P01,All Persons,Persons,All Persons,,1,1
+P01002,P01,Females,Females,Females,P01001,1,2
+P01003,P01,Males,Males,Males,P01001,1,3
+P02001,P02,All Persons,Persons,All Persons,,1,0
+P02002,P02,Aged 4 years and under,0-4,0 to 4,P01001,1,1
+P02003,P02,Aged 5 to 9 years,5-9,5 to 9,P01001,1,2
+P02004,P02,Aged 10 to 14 years,10-14,10 to 14,P01001,1,3
+P02005,P02,Aged 15 to 19 years,15-19,15 to 19,P01001,1,4
+P02006,P02,Aged 20 to 24 years,20-24,20 to 24,P01001,1,5
+P02007,P02,Aged 25 to 29 years,25-29,25 to 29,P01001,1,6
+P02008,P02,Aged 30 to 34 years,30-34,30 to 34,P01001,1,7
+P02009,P02,Aged 35 to 39 years,35-39,35 to 39,P01001,1,8
+P02010,P02,Aged 40 to 44 years,40-44,40 to 44,P01001,1,9
+P02011,P02,Aged 45 to 49 years,45-49,45 to 49,P01001,1,10
+P02012,P02,Aged 50 to 54 years,50-54,50 to 54,P01001,1,11
+P02013,P02,Aged 55 to 59 years,55-59,55 to 59,P01001,1,12
+P02014,P02,Aged 60 to 64 years,60-64,60 to 64,P01001,1,13
+P02015,P02,Aged 65 to 69 years,65-69,65 to 69,P01001,1,14
+P02016,P02,Aged 70 to 74 years,70-74,70 to 74,P01001,1,15
+P02017,P02,Aged 75 to 79 years,75-79,75 to 79,P01001,1,16
+P02018,P02,Aged 80 to 84 years,80-84,80 to 84,P01001,1,17
+P02019,P02,Aged 85 to 89 years,85-89,85 to 89,P01001,0,18
+P02020,P02,Aged 90 years and over,90+,90 or over,P01001,0,19
+P02021,P02,Aged 85 years and over,85+,85 or over,P01001,2,20
+P03001,P03,All Persons,Persons,All Persons,,1,0
+P03002,P03,Females: Aged 4 years and under,F 0-4,Females 0 to 4,P01002,1,1
+P03003,P03,Females: Aged 5 to 9 years,F 5-9,Females 5 to 9,P01002,1,2
+P03004,P03,Females: Aged 10 to 14 years,F 10-14,Females 10 to 14,P01002,1,3
+P03005,P03,Females: Aged 15 to 19 years,F 15-19,Females 15 to 19,P01002,1,4
+P03006,P03,Females: Aged 20 to 24 years,F 20-24,Females 20 to 24,P01002,1,5
+P03007,P03,Females: Aged 25 to 29 years,F 25-29,Females 25 to 29,P01002,1,6
+P03008,P03,Females: Aged 30 to 34 years,F 30-34,Females 30 to 34,P01002,1,7
+P03009,P03,Females: Aged 35 to 39 years,F 35-39,Females 35 to 39,P01002,1,8
+P03010,P03,Females: Aged 40 to 44 years,F 40-44,Females 40 to 44,P01002,1,9
+P03011,P03,Females: Aged 45 to 49 years,F 45-49,Females 45 to 49,P01002,1,10
+P03012,P03,Females: Aged 50 to 54 years,F 50-54,Females 50 to 54,P01002,1,11
+P03013,P03,Females: Aged 55 to 59 years,F 55-59,Females 55 to 59,P01002,1,12
+P03014,P03,Females: Aged 60 to 64 years,F 60-64,Females 60 to 64,P01002,1,13
+P03015,P03,Females: Aged 65 to 69 years,F 65-69,Females 65 to 69,P01002,1,14
+P03016,P03,Females: Aged 70 to 74 years,F 70-74,Females 70 to 74,P01002,1,15
+P03017,P03,Females: Aged 75 to 79 years,F 75-79,Females 75 to 79,P01002,1,16
+P03018,P03,Females: Aged 80 to 84 years,F 80-84,Females 80 to 84,P01002,1,17
+P03019,P03,Females: Aged 85 to 89 years,F 85-89,Females 85 to 89,P01002,0,18
+P03020,P03,Females: Aged 90 years and over,F 90+,Females 90 or over,P01002,0,19
+P03021,P03,Females: Aged 85 years and over,F 85+,Females 85 or over,P01002,2,20
+P03021,P03,Males: Aged 4 years and under,M 0-4,Males 0 to 4,P01003,1,1
+P03022,P03,Males: Aged 5 to 9 years,M 5-9,Males 5 to 9,P01003,1,2
+P03023,P03,Males: Aged 10 to 14 years,M 10-14,Males 10 to 14,P01003,1,3
+P03024,P03,Males: Aged 15 to 19 years,M 15-19,Males 15 to 19,P01003,1,4
+P03025,P03,Males: Aged 20 to 24 years,M 20-24,Males 20 to 24,P01003,1,5
+P03026,P03,Males: Aged 25 to 29 years,M 25-29,Males 25 to 29,P01003,1,6
+P03027,P03,Males: Aged 30 to 34 years,M 30-34,Males 30 to 34,P01003,1,7
+P03028,P03,Males: Aged 35 to 39 years,M 35-39,Males 35 to 39,P01003,1,8
+P03029,P03,Males: Aged 40 to 44 years,M 40-44,Males 40 to 44,P01003,1,9
+P03030,P03,Males: Aged 45 to 49 years,M 45-49,Males 45 to 49,P01003,1,10
+P03031,P03,Males: Aged 50 to 54 years,M 50-54,Males 50 to 54,P01003,1,11
+P03032,P03,Males: Aged 55 to 59 years,M 55-59,Males 55 to 59,P01003,1,12
+P03033,P03,Males: Aged 60 to 64 years,M 60-64,Males 60 to 64,P01003,1,13
+P03034,P03,Males: Aged 65 to 69 years,M 65-69,Males 65 to 69,P01003,1,14
+P03035,P03,Males: Aged 70 to 74 years,M 70-74,Males 70 to 74,P01003,1,15
+P03036,P03,Males: Aged 75 to 79 years,M 75-79,Males 75 to 79,P01003,1,16
+P03037,P03,Males: Aged 80 to 84 years,M 80-84,Males 80 to 84,P01003,1,17
+P03038,P03,Males: Aged 85 to 89 years,M 85-89,Males 85 to 89,P01003,0,18
+P03039,P03,Males: Aged 90 years and over,M 90+,Males 90 or over,P01003,0,19
+P03040,P03,Males: Aged 85 years and over,M 85+,Males 85 or over,P01003,2,20
+P04001,P04,Population Density,Density,Population Density,,1,1
+H01001,H01,Number of households with at least one usual resident ,Households,Households,,1,1
